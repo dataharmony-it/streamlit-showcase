@@ -3,7 +3,8 @@ import pandas as pd
 import plotly.express as px
 from datetime import datetime
 
-# Load sample sales dataset (e.g., from a CSV file or use a public dataset)
+st.set_page_config(page_title="Sales Dashboard Showcase - dataharmony.it")
+
 @st.cache_data
 
 def load_data():

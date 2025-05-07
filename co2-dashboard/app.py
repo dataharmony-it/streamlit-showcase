@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+st.set_page_config(page_title="CO2 Dashboard Showcase - dataharmony.it")
+
 @st.cache_data
 
 def load_data():
