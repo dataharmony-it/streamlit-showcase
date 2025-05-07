@@ -5,8 +5,7 @@ import plotly.express as px
 @st.cache_data
 
 def load_data():
-    url = "https://raw.githubusercontent.com/owid/co2-data/refs/heads/master/owid-co2-data.csv"
-    df = pd.read_csv(url, encoding='ISO-8859-1')
+    df = pd.read_csv("owid-co2-data.csv", encoding='ISO-8859-1')
     df = df[df['year'] >= 1950]
     df = df[df['co2'].notna()]
     return df

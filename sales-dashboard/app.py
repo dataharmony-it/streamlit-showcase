@@ -7,8 +7,7 @@ from datetime import datetime
 @st.cache_data
 
 def load_data():
-    url = "https://raw.githubusercontent.com/nileshely/SuperStore-Dataset-2019-2022/refs/heads/main/superstore_dataset.csv"
-    df = pd.read_csv(url, encoding='ISO-8859-1')
+    df = pd.read_csv("superstore_dataset.csv", encoding='ISO-8859-1')
     df.columns = df.columns.str.strip().str.lower()
     df.rename(columns={df.columns[0]: 'order_id'}, inplace=True)
     df['order_date'] = pd.to_datetime(df['order_date'])
